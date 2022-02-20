@@ -1,0 +1,6 @@
+controller\AlumnoController.class
+controller\MateriaController.class
+dominio\IAlumnoDAO.class
+model\Alumno.class
+conexion\Conexion.class
+dominio\AlumnoDAOImpl.class
