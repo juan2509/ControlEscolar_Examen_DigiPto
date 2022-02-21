@@ -56,7 +56,7 @@ public class AlumnoDAOImpl implements IAlumnoDAO {
         
         try {
             con = Conexion.getConexion();
-            stmt = con.prepareStatement("SELECT IdAlumno, Nombre, ApellidoPaterno, ApellidoMaterno FROM alumno WHERE IdAlumno = ?");
+            stmt = con.prepareStatement("CALL AlumnoGetById(?) ");
             
             stmt.setInt(1, idAlumno);
             
@@ -92,7 +92,7 @@ public class AlumnoDAOImpl implements IAlumnoDAO {
         
         try {
             con = Conexion.getConexion();
-            stmt = con.prepareStatement("INSERT INTO alumno(Nombre, ApellidoPaterno, ApellidoMaterno) VALUES (?,?,?)");
+            stmt = con.prepareStatement("CALL AlumnoAdd(?,?,?)");
             
             stmt.setString(1, alumno.getNombre());
             stmt.setString(2, alumno.getApellidoPaterno());
@@ -120,12 +120,12 @@ public class AlumnoDAOImpl implements IAlumnoDAO {
         
         try {
             con = Conexion.getConexion();
-            stmt = con.prepareStatement("UPDATE alumno SET Nombre = ?, ApellidoPaterno = ?, ApellidoMaterno = ? WHERE IdAlumno = ?");
+            stmt = con.prepareStatement("CALL AlumnoUpdate(?,?,?,?)");
             
-            stmt.setString(1, alumno.getNombre());
-            stmt.setString(2, alumno.getApellidoPaterno());
-            stmt.setString(3, alumno.getApellidoMaterno());
-            stmt.setInt(4, alumno.getIdAlumno());
+            stmt.setInt(1, alumno.getIdAlumno());
+            stmt.setString(2, alumno.getNombre());
+            stmt.setString(3, alumno.getApellidoPaterno());
+            stmt.setString(4, alumno.getApellidoMaterno());
             
             rowsAffected = stmt.executeUpdate();
             
@@ -149,7 +149,7 @@ public class AlumnoDAOImpl implements IAlumnoDAO {
         
         try {
             con = Conexion.getConexion();
-            stmt = con.prepareStatement("DELETE FROM alumno WHERE IdAlumno = ?");
+            stmt = con.prepareStatement("CALL AlumnoDelete(?)");
             
             stmt.setInt(1, idAlumno);
             

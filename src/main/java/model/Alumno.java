@@ -2,9 +2,11 @@ package model;
 
 public class Alumno {
     private int idAlumno;
-    private String Nombre;
-    private String ApellidoPaterno;
-    private String ApellidoMaterno;
+    private String nombre;
+    private String apellidoPaterno;
+    private String apellidoMaterno;
+    
+    //constructores
     
     public Alumno() {
     }
@@ -13,47 +15,48 @@ public class Alumno {
         this.idAlumno = idAlumno;
     }
     
-    public Alumno(String nombre, String ApellidoPaterno, String ApellidoMaterno) {
-        this.Nombre = nombre;
-        this.ApellidoPaterno = ApellidoPaterno;
-        this.ApellidoMaterno = ApellidoMaterno;
+    public Alumno(String nombre, String apellidoPaterno, String apellidoMaterno) {
+        this.nombre = nombre;
+        this.apellidoPaterno = apellidoPaterno;
+        this.apellidoMaterno = apellidoMaterno;
     }
 
-    public Alumno(int idAlumno, String Nombre, String ApellidoPaterno, String ApellidoMaterno) {
+    public Alumno(int idAlumno, String nombre, String apellidoPaterno, String apellidoMaterno) {
         this.idAlumno = idAlumno;
-        this.Nombre = Nombre;
-        this.ApellidoPaterno = ApellidoPaterno;
-        this.ApellidoMaterno = ApellidoMaterno;
+        this.nombre = nombre;
+        this.apellidoPaterno = apellidoPaterno;
+        this.apellidoMaterno = apellidoMaterno;
     } 
+    
+    //setters y getters
 
     public int getIdAlumno() {
         return idAlumno;
     }    
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getApellidoPaterno() {
-        return ApellidoPaterno;
+        return apellidoPaterno;
     }
 
-    public void setApellidoPaterno(String ApellidoPaterno) {
-        this.ApellidoPaterno = ApellidoPaterno;
+    public void setApellidoPaterno(String apellidoPaterno) {
+        this.apellidoPaterno = apellidoPaterno;
     }
 
     public String getApellidoMaterno() {
-        return ApellidoMaterno;
+        return apellidoMaterno;
     }
 
-    public void setApellidoMaterno(String ApellidoMaterno) {
-        this.ApellidoMaterno = ApellidoMaterno;
+    public void setApellidoMaterno(String apellidoMaterno) {
+        this.apellidoMaterno = apellidoMaterno;
     }
-    
     
     
 }

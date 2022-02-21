@@ -1,6 +1,9 @@
 controller\AlumnoController.class
-controller\MateriaController.class
 dominio\IAlumnoDAO.class
+dominio\IMateriaDAO.class
+controller\MateriaController.class
+dominio\MateriaADOImpl.class
 model\Alumno.class
 conexion\Conexion.class
+model\Materia.class
 dominio\AlumnoDAOImpl.class
